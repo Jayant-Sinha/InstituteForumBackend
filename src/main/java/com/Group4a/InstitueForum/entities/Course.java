@@ -19,4 +19,7 @@ public class Course {
     @OneToMany(cascade = CascadeType.ALL, targetEntity = Subject.class, mappedBy = "course")
     private List<Subject> subjects;
 
+    @ManyToMany
+    private List<User> users;
+
 }
