@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @RequestMapping(path = "/api/v1")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.HEAD}, allowedHeaders = "*")
 public class CourseController {
 
     @Autowired
@@ -33,7 +34,6 @@ public class CourseController {
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-
     }
 
     @GetMapping("/courses/{id}")

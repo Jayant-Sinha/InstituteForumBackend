@@ -9,8 +9,11 @@ import java.util.List;
 public interface CourseService {
 
     public List<Course> getAllCourses();
+//    public List<Course> getAllCoursesByUserId(long userId);
 
     void addCourse(Course course);
 
     Course getCourseById(long id) throws Exception;
+
+//    void addUserToCourse(long userId, long courseId);
 }
